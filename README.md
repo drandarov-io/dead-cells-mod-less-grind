@@ -1,12 +1,12 @@
 # Changes 
 
-# Cells
+## Cells
 Cell Drops -> 10x
 
-# Daily Run
+## Daily Run
 Rewards -> After 1, 2 and 3 runs
 
-# Blueprints
+## Blueprints
 Common -> 20%
 Uncommon -> 10%
 Rare -> 5%
