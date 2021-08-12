@@ -1,7 +1,7 @@
 # Changes 
 
 ## Cells
-Cell Drops -> 10x
+Cell Drops -> 5x / 10x
 
 ## Daily Run
 Rewards -> After 1, 2 and 3 runs
