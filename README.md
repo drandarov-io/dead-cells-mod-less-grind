@@ -1,4 +1,4 @@
-# Changes 
+# Changes
 
 ## Cells
 Cell Drops -> 5x / 10x
@@ -19,8 +19,11 @@ Legendary -> 2.5%
 ## Make changes
 
 .\CDBTool.exe -Collapse -InDir "export\data.cdb_" -OutCDB "export\data.cdb"
-rmdir /s export\data.cdb_
-.\PAKTool.exe -CreateDiffPak -RefPak "..\res.pak" -InDir "W:\Games\SteamLibrary\steamapps\common\Dead Cells\ModTools\export" -OutPak ".\mod\res.pak"
+rmdir -Path .\export\data.cdb_\
+.\PAKTool.exe -CreateDiffPak -RefPak "..\res.pak" -InDir "D:\Games\SteamLibrary\steamapps\common\Dead Cells\ModTools\export" -OutPak ".\mod\res.pak"
 
 ## Testing
 .\PAKTool.exe -Expand -OutDir "mod\test" -RefPak "mod\res.pak"
+
+## Upload
+./deadcells.exe --workshop
