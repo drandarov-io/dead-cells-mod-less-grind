@@ -18,12 +18,25 @@ Legendary -> 2.5%
 
 ## Make changes
 
+## Build Mod
 .\CDBTool.exe -Collapse -InDir "export\data.cdb_" -OutCDB "export\data.cdb"
 rmdir -Path .\export\data.cdb_\
 .\PAKTool.exe -CreateDiffPak -RefPak "..\res.pak" -InDir "D:\Games\SteamLibrary\steamapps\common\Dead Cells\ModTools\export" -OutPak ".\mod\res.pak"
+
+## Build Mod (Workaround CRC build fail)
+Delete duplicate skins
+
+### Build res_fixed.pak
+.\CDBTool.exe -Collapse -InDir "export\data.cdb_" -OutCDB "export\data.cdb"
+rmdir -Path .\export\data.cdb_\
+.\PAKTool.exe -Collapse -InDir "export" -OutPak "res_fixed.pak"
+
+### Build diff against res_fixed.pak
+.\PAKTool.exe -CreateDiffPak -RefPak "res_fixed.pak" -InDir "D:\Games\SteamLibrary\steamapps\common\Dead Cells\ModTools\export" -OutPak ".\mod\res.pak"
 
 ## Testing
 .\PAKTool.exe -Expand -OutDir "mod\test" -RefPak "mod\res.pak"
 
 ## Upload
 ./deadcells.exe --workshop
+
